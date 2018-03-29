@@ -2,15 +2,33 @@
 
 <html lang="en">
 	{% include head.html %}
-
 	<body>
-
     {% include navbar.html %}
-
-    {{ content }}
-
+    <!-- Page Content -->
+    <div class="container my-4">
+      <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+          {{ content }}
+          <!-- Pagination -->
+          {% include pagination.html %}
+        </div>
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+          {% include categories_widget.html %}
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
     {% include scripts.html %}
-
   </body>
-
 </html>
+
