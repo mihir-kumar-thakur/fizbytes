@@ -1,0 +1,11 @@
+<div class="post-footer d-flex align-items-center flex-column flex-sm-row">
+  <a href="#" class="author d-flex align-items-center flex-wrap">
+    <div class="avatar"><img src="/assets/img/avatar-1.jpg" alt="..." class="img-fluid"></div>
+    <div class="title"><span>{{ post.author }}</span></div>
+  </a>
+  <div class="d-flex align-items-center flex-wrap">
+    <div class="date"><i class="icon-clock"></i> {{ page.date | timeago }}</div>
+    <!-- <div class="views"><i class="icon-eye"></i> 500</div> -->
+    <div class="comments meta-last"><i class="icon-comment"></i>{% capture words %}{{ page.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " Min read" }}{% endunless %}</div>
+  </div>
+</div>

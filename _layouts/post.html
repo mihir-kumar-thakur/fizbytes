@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	{% include head.html %}
-	<body>
+  {% include head.html %}
+  <body>
     {% include navbar.html %}
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-        <main class="posts-listing col-lg-8"> 
-          <div class="container">
-            <div class="row">
-              {{ content }}
-            </div>
-            {% include pagination.html %}
-          </div>
-        </main>
+        {% include post/post.html %}
         {% include left_side_widget.html %}
       </div>
     </div>
