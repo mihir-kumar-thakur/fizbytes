@@ -1,0 +1,8 @@
+<div class="post-meta d-flex justify-content-between">
+  <div class="category">
+    {% for category in page.categories %}
+      <a href="{{site.baseurl}}/categories/#{{category}}" class="category">&#35;{{ category }}</a>
+    {% endfor %}
+  </div>
+</div>
+

@@ -1,0 +1,5 @@
+<div class="post-tags">
+  {% for tag in page.tags %}
+    <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
+  {% endfor %}
+</div>
