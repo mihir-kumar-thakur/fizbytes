@@ -25,14 +25,14 @@ layout: default
         {{ post.content | strip_html | truncatewords: 25 }}
       </p>
       <footer class="post-footer d-flex align-items-center">
-        <a href="#" class="author d-flex align-items-center flex-wrap">
+       <!--  <a href="#" class="author d-flex align-items-center flex-wrap">
           <div class="avatar">
             <img src="assets/img/avatar-3.jpg" alt="..." class="img-fluid">
           </div>
           <div class="title">
             <span>{{ post.author }}</span>
           </div>
-        </a>
+        </a> -->
         <div class="date"><i class="icon-clock"></i> {{ post.date | timeago }}</div>
         <div class="comments meta-last"><i class="icon-comment"></i>
           {% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: "Min read" }}{% endunless %}
