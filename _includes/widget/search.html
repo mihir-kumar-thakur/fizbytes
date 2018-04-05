@@ -1,11 +1,32 @@
+<!-- https://blog.webjeda.com/instant-jekyll-search/ -->
+<!-- https://github.com/christian-fei/Simple-Jekyll-Search -->
+
 <div class="widget search">
   <header>
     <h3 class="h6">Search the blog</h3>
   </header>
-  <form action="#" class="search-form">
+  <!-- <form action="#" class="search-form">
     <div class="form-group">
       <input type="search" placeholder="What are you looking for?">
       <button type="submit" class="submit"><i class="icon-search"></i></button>
     </div>
-  </form>
+  </form> -->
+  <!-- Html Elements for Search -->
+<div id="search-container">
+<input type="text" id="search-input" placeholder="search...">
+<ul id="results-container"></ul>
 </div>
+</div>
+
+
+<!-- Script pointing to search-script.js -->
+<script src="/assets/vendor/search/simple-jekyll-search.min.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+})
+</script>
