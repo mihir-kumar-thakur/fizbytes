@@ -1,22 +1,15 @@
 <!-- https://blog.webjeda.com/instant-jekyll-search/ -->
 <!-- https://github.com/christian-fei/Simple-Jekyll-Search -->
+<style type="text/css">
+  #search-list-link:hover {
+    background-color: #00bfff;
+  }
+</style>
+<h3 class="h6">Search FirstByte</h3>
 
-<div class="widget search">
-  <header>
-    <h3 class="h6">Search the blog</h3>
-  </header>
-  <!-- <form action="#" class="search-form">
-    <div class="form-group">
-      <input type="search" placeholder="What are you looking for?">
-      <button type="submit" class="submit"><i class="icon-search"></i></button>
-    </div>
-  </form> -->
-  <!-- Html Elements for Search -->
-<div id="search-container">
-<input type="text" id="search-input" placeholder="search...">
-<ul id="results-container"></ul>
-</div>
-</div>
+<input type="text" id="search-input" placeholder="Enter Your Search Term Here ..." />
+
+<div class="list-group" id="results-container"></div>
 
 
 <!-- Script pointing to search-script.js -->
@@ -24,9 +17,12 @@
 
 <!-- Configuration -->
 <script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/search.json'
-})
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<a href="{url}" class="list-group-item" id="search-list-link"> <h5 class="list-group-item-heading">{title}</h5><p class="list-group-item-text">{description}</p></a>',
+    noResultsText: 'No results found',
+    limit: 25
+  });
 </script>

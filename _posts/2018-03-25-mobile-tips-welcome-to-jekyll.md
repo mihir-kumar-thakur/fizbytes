@@ -3,7 +3,7 @@ layout: post
 author: Admin
 title:  "Welcome to Jekyll!"
 date:   2018-03-25 22:04:00 +0530
-categories: Holidays Hawaii Mihir Thakue
+categories: Holidays Hawaii Mihir
 tags: [mihir, kumar, thakur]
 thumbnail: blog-1.jpg
 
