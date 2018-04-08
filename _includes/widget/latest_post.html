@@ -1,44 +1,29 @@
+<style type="text/css">
+  .latest-posts-images{
+    min-width: 69px;
+    max-width: 70px;
+    height: 103px;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+</style>
 <div class="widget latest-posts">
-<header>
-  <h3 class="h6">Latest Posts</h3>
-</header>
-<div class="blog-posts">
-  <a href="#">
-    <div class="item d-flex align-items-center">
-      <div class="image">
-        <img src="/assets/img/small-thumbnail-1.jpg" alt="..." class="img-fluid">
-      </div>
-      <div class="title">
-        <strong>Alberto Savoia Can Teach You About</strong>
-        <div class="d-flex align-items-center">
-          <div class="views"><i class="icon-eye"></i> 500</div>
-          <div class="comments"><i class="icon-comment"></i>12</div>
+  <header><h3 class="h6">Latest Posts</h3></header>
+  <div class="blog-posts">
+    {% for post in site.posts limit:5 %}  
+      <a href="{{ post.url }}">
+        <div class="item d-flex align-items-center">
+          <div class="latest-posts-images">
+            <img src="{{'/assets/img/posts/' | prepend: site.baseurl | append : post.thumbnail}}" alt="{{ post.title }}" class="img-fluid">
+          </div>
+          <div class="title">
+            <strong>{{ post.title }}</strong>
+            <div class="d-flex align-items-center">
+              <p class="text-muted">{{ post.content | strip_html | truncatewords: 15 }}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </a>
-  <a href="#">
-    <div class="item d-flex align-items-center">
-      <div class="image"><img src="/assets/img/small-thumbnail-2.jpg" alt="..." class="img-fluid"></div>
-      <div class="title">
-        <strong>Alberto Savoia Can Teach You About</strong>
-        <div class="d-flex align-items-center">
-          <div class="views"><i class="icon-eye"></i> 500</div>
-          <div class="comments"><i class="icon-comment"></i>12</div>
-        </div>
-      </div>
-    </div>
-  </a>
-  <a href="#">
-    <div class="item d-flex align-items-center">
-      <div class="image"><img src="/assets/img/small-thumbnail-3.jpg" alt="..." class="img-fluid"></div>
-      <div class="title">
-        <strong>Alberto Savoia Can Teach You About</strong>
-        <div class="d-flex align-items-center">
-          <div class="views"><i class="icon-eye"></i> 500</div>
-          <div class="comments"><i class="icon-comment"></i>12</div>
-        </div>
-      </div>
-  </a>
+      </a>
+    {% endfor %}  
   </div>
 </div>
