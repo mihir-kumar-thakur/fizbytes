@@ -1,7 +1,7 @@
 <div class="post-footer d-flex align-items-center flex-column flex-sm-row">
   <a href="#" class="author d-flex align-items-center flex-wrap">
-    <div class="avatar"><img src="/assets/img/avatar-1.jpg" alt="..." class="img-fluid"></div>
-    <div class="title"><span>{{ post.author }}</span></div>
+    <div class="avatar"><a href="{{page.author_fb}}" target="_blank"><img src="{{'/assets/img/authors/' | prepend: site.baseurl | append : page.author_image}}" alt="..." class="img-fluid"></div>
+    <div class="title"><span><p>Posted By <br>{{ page.author }}</p></span></div></a>
   </a>
   <div class="d-flex align-items-center flex-wrap">
     <div class="date"><i class="icon-clock"></i> {{ page.date | timeago }}</div>
