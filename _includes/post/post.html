@@ -7,7 +7,7 @@
       <div class="post-details">
 
         {% include post/categories.html %}
-        
+
         {% include post/heading.html %}
 
         {% include post/author.html %}
@@ -17,9 +17,19 @@
         {% include post/tags.html %}
 
         {% include post/pagination.html %}
-
-        {% include post/comments.html %}
       </div>
+      <hr>
+      <div class="fb-comments" data-href="https://www.firstbyte.xyz/" data-width="100%" data-numposts="5"></div>
     </div>
   </div>
 </main>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=1612380698858180&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
