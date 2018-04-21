@@ -1,20 +1,6 @@
 <header class="header">
   <!-- Main Navbar-->
   <nav class="navbar navbar-expand-lg">
-    <div class="search-area">
-      <div class="search-area-inner d-flex align-items-center justify-content-center">
-        <div class="close-btn"><i class="icon-close"></i></div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-8">
-            <form action="#">
-              <div class="form-group">
-                {% include widget/search.html %}
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <!-- Navbar Brand -->
       <div class="navbar-header d-flex align-items-center justify-content-between">
@@ -24,19 +10,23 @@
       </div>
       <!-- Navbar Menu -->
       <div id="navbarcollapse" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link active ">Home</a>
-          </li>
-          <li class="nav-item"><a href="blog.html" class="nav-link ">Blog</a>
-          </li>
-          <li class="nav-item"><a href="post.html" class="nav-link ">Post</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link ">Contact</a>
-          </li>
-        </ul>
-        <div class="navbar-text"><a href="#" class="search-btn"><i class="icon-search-1"></i></a></div>
-        <ul class="langs navbar-text"><a href="#" class="active">EN</a><span>           </span><a href="#">ES</a></ul>
+        <span id="span-search-input"><input type="text" id="search-input" class="form-control" placeholder="Enter Your Search Term Here ..." />
+        <ul id="results-container"></ul></span>
       </div>
     </div>
   </nav>
 </header>
+
+<!-- Script pointing to search-script.js -->
+<script src="/assets/vendor/search/simple-jekyll-search.min.js" type="text/javascript"></script>
+<!-- Configuration -->
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 25
+  });
+</script>

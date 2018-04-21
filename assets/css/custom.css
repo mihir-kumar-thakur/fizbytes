@@ -73,3 +73,48 @@ section .section-title {
   }
 }
 /* footer css ends */
+#span-search-input {
+  width: 85%
+}
+#search-input{
+  width: 100%;
+  margin-left: 17%;
+  position: relative;
+  display: inline-block;
+}
+
+#results-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+}
+
+#results-container li a {
+  border: 1px solid #ddd;
+  margin-top: 5px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  margin-left: 11%;
+  width: 64%;
+  position: absolute;
+}
+
+#results-container li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+@media only screen and (max-device-width: 480px) {
+  #search-input{
+    width: 115%;
+    margin-left: 0%;
+  }
+ #results-container li a {
+    width: 89%;
+    margin-left: 0%;
+  }
+}
