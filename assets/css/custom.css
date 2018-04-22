@@ -117,3 +117,11 @@ section .section-title {
     margin-left: 0%;
   }
 }
+
+.latest-posts, .categories{
+  border: 1px solid #9e4343;
+}
+
+.social_links {
+  margin-top: -5%;
+}
