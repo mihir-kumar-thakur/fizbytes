@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="input-group col-12">
+  <input type="text" class="form-control mr-sm-2" placeholder="Search..." id="input-search-web" aria-label="Search">
+</div>
+<br>
+<br>
+
+<div class="input-group col-sm-12">
+  <div id="search-results-container" class="list-group mr-sm-2" style="margin-top: 1rem;"></div>
+</div>
+
+
+<!-- Script pointing to search-script.js -->
+<script src="/assets/vendor/search/simple-jekyll-search.min.js" type="text/javascript"></script>
+<!-- Configuration -->
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('input-search-web'),
+    resultsContainer: document.getElementById('search-results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action flex-column align-items-start result-list-hover"><div class="d-flex justify-content-between"><h5 class="mb-1 result-title">{title}</h5><small>{date}</small></div><p class="mb-1">{description}</p></small></a><div class="search-result-devider"></div>',
+    noResultsText: '<li><a href="#">No Result Found</a></li>',
+    limit: 25
+  });
+</script>
+
+

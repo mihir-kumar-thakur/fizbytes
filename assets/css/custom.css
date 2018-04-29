@@ -147,3 +147,14 @@ section .section-title {
   padding: 3px 8px;
   border-radius: 3px;
 }
+
+.search-result-devider{
+  margin-bottom: 0.2rem;
+}
+
+.result-list-hover:hover { 
+  background-color: #d0d0c6;
+}
+.result-title{
+  color: #ce5b49;
+}
