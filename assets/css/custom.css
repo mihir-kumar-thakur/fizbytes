@@ -120,10 +120,19 @@ section .section-title {
 
 .latest-posts, .categories{
   border: 1px solid #9e4343;
+  margin-top: -2rem;
+}
+
+.blog-post .post-body p{
+  text-align: justify;
 }
 
 .social_links {
   margin-top: -5%;
+}
+
+.post-single{
+  margin-top: -2rem;
 }
 
 .custom-counter {

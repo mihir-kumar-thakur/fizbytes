@@ -2,8 +2,34 @@
 layout: default
 ---
 
+<style>
+input::-webkit-input-placeholder {
+  color: red !important;
+  color: orangered;
+  font-family: -webkit-body;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+  color: red !important;
+  color: orangered;
+  font-family: -webkit-body;
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: red !important;
+  color: orangered;
+  font-family: -webkit-body;
+}
+ 
+input:-ms-input-placeholder {  
+  color: red !important;
+  color: orangered;
+  font-family: -webkit-body;
+}
+</style>
+
 <div class="input-group col-12">
-  <input type="text" class="form-control mr-sm-2" placeholder="Search..." id="input-search-web" aria-label="Search">
+  <input type="text" class="form-control mr-sm-2" placeholder="Search FirstByte Here..." id="input-search-web" aria-label="Search" autocomplete="off">
 </div>
 <br>
 <br>
@@ -21,10 +47,8 @@ layout: default
     searchInput: document.getElementById('input-search-web'),
     resultsContainer: document.getElementById('search-results-container'),
     json: '/search.json',
-    searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action flex-column align-items-start result-list-hover"><div class="d-flex justify-content-between"><h5 class="mb-1 result-title">{title}</h5><small>{date}</small></div><p class="mb-1">{description}</p></small></a><div class="search-result-devider"></div>',
+    searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action flex-column align-items-start result-list-hover"><div class="d-flex justify-content-between"><h5 class="mb-1 result-title">{title}</h5></div><p class="mb-1">{description}</p></small><small class="text-muted">{date}</small></a><div class="search-result-devider"></div>',
     noResultsText: '<li><a href="#">No Result Found</a></li>',
     limit: 25
   });
 </script>
-
-
