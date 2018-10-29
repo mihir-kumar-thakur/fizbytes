@@ -40,7 +40,7 @@ relative_links:
   enabled:     true
   collections: true
 
-permalink: /blog/:collection/:categories/:title
+permalink: /:collection/:categories/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
